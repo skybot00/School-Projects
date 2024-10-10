@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="validation.js" defer></script>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .warning {
+            color: orange;
+            font-size: 12px;
+        }
+        label {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Registration Form</h1>
+<form id="registrationForm" onsubmit="return validateForm()">
+
+    <!-- Username -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <span id="usernameError" class="error"></span>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <span id="emailError" class="error"></span>
+
+    <!-- Phone Number -->
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone">
+    <span id="phoneError" class="error"></span>
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordError" class="error"></span>
+
+    <!-- Confirm Password -->
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword">
+    <span id="confirmPasswordError" class="error"></span>
+
+    <!-- Gender -->
+    <label>Gender:</label>
+    <input type="radio" id="genderMale" name="gender" value="Male">
+    <label for="genderMale" style="display: inline;">Male</label>
+    <input type="radio" id="genderFemale" name="gender" value="Female">
+    <label for="genderFemale" style="display: inline;">Female</label>
+    <input type="radio" id="genderOther" name="gender" value="Other">
+    <label for="genderOther" style="display: inline;">Other</label>
+    <span id="genderError" class="error"></span>
+
+    <!-- Age Group -->
+    <label for="ageGroup">Age Group:</label>
+    <select id="ageGroup" name="ageGroup">
+        <option value="">Select Age Group</option>
+        <option value="< 21">Less than 21</option>
+        <option value="21-25">21-25</option>
+        <option value="26-35">26-35</option>
+        <option value="36-50">36-50</option>
+        <option value="50+">Older than 50</option>
+    </select>
+    <span id="ageGroupError" class="error"></span>
+
+    <!-- Favorite Music Genre -->
+    <label>Favorite Music Genre:</label>
+    <input type="checkbox" id="pop" name="music" value="Pop">
+    <label for="pop" style="display: inline;">Pop</label>
+    <input type="checkbox" id="hip-hop" name="music" value="Hip-hop">
+    <label for="hip-hop" style="display: inline;">Hip-Hop</label>
+    <input type="checkbox" id="jazz" name="music" value="Jazz">
+    <label for="jazz" style="display: inline;">Jazz</label>
+    <input type="checkbox" id="rock" name="music" value="Rock">
+    <label for="rock" style="display: inline;">Rock</label>
+    <input type="checkbox" id="classical" name="music" value="Classical">
+    <label for="classical" style="display: inline;">Classical</label>
+    <input type="checkbox" id="country" name="music" value="Country">
+    <label for="country" style="display: inline;">Country</label>
+    <span id="musicError" class="error"></span>
+
+    <br><br>
+    <!-- Submit and Reset buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset" onclick="resetForm()">Clear</button>
+
+</form>
+</body>
+</html>
